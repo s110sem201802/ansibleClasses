@@ -1,10 +1,9 @@
 ---
 # tasks file for entrega02t2_2
-  - name: start ssh service
-    service:
-      name: ssh
-      state: started
   - name: create file
     file:
       path: /home/gbrand/arquivoEntrega02.txt
       state: touch
+    notify:
+      - Start ssh
+
