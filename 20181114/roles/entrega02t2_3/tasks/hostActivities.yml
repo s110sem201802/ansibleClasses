@@ -1,0 +1,20 @@
+---
+# tasks file for entrega02t2
+   - name: Download docker image
+     docker_image:
+       name: gbrandt3
+   - name: Create docker container 1
+     docker_container:
+       name: minhatarefat21
+       image: gbrandt3
+       interactive: yes
+   - name: Create docker container 2
+     docker_container:
+       name: minhatarefat22
+       image: gbrandt3
+       interactive: yes
+   - name: Create docker container 3
+     docker_container:
+       name: minhatarefat23
+       image: gbrandt3
+       interactive: yes

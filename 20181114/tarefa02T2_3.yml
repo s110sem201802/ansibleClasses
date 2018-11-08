@@ -1,0 +1,11 @@
+---
+# playbook to trigger roles
+- hosts: local
+  connection: local
+  roles:
+    - entrega02t2_3
+
+- hosts: containersGroup
+  connection: docker
+  roles:
+    - entrega02t2_3

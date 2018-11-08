@@ -1,0 +1,6 @@
+---
+# tasks file for entrega02t2_3
+  - include: hostActivities.yml
+    when: "'local' in group_names"
+  - include: containerActivities.yml
+    when: "'containersGroup' in group_names"
