@@ -4,3 +4,15 @@
     service:
       name: ssh
       state: started
+
+  - name: Create Admin home
+    file:
+      path: '{{ homeAdmin }}'
+      state: directory
+      mode: 0755
+
+  - name: Create Deploy home
+    file:
+      path: '{{ homeDeploy }}'
+      state: directory
+      mode: 0755
